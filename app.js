@@ -95,7 +95,7 @@ app.get( '/auth/google/secrets',
 }));
 
 app.get("/login",function(req,res){
-    res.render("Login");
+    res.render("login");
 })
 
 app.get("/register",function(req,res){
