@@ -82,7 +82,7 @@ passport.use(new GoogleStrategy({
 ));
 
 app.get("/",function(req,res){
-    res.render("Home");
+    res.render("home");
 })
 
 app.get('/auth/google', passport.authenticate('google', { 
