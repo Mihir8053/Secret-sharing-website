@@ -151,12 +151,16 @@ app.get("/logout",function(req,res){
     });
 })
 
+// app.get("/redirectPage",function(req,res){
+//     res.redirect("/redirectPage");
+// })
+
 app.post("/register",function(req,res){
 
     User.register({username: req.body.username}, req.body.password, function(err,user){
         if(err){
             console.log(err);
-            res.redirect("/register");
+            res.render("redirectPage");
         }
         else{
             passport.authenticate("local")(req,res,function(){
